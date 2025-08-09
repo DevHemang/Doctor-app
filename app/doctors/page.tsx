@@ -244,9 +244,11 @@ function DoctorSearchContent() {
       if (sortBy) params.append('sortBy', sortBy);
 
       try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/doctors?${params.toString()}`
-        );
+        // const res = await fetch(
+        //   `${process.env.NEXT_PUBLIC_API_URL}/api/doctors?${params.toString()}`
+        // );
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/doctors?${params.toString()}`);
+
         if (!res.ok) throw new Error('Failed to fetch');
         const data: Doctor[] = await res.json();
 
