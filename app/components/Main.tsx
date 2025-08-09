@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
 
 const locations = [
   "Mumbai",
